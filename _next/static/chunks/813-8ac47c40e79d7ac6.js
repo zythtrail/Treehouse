@@ -795,7 +795,7 @@
                     asChild: !0,
                     fluid: !0,
                     children: (0, t.jsx)(a.default, {
-                      href: /app/index.html,
+                      href: "./app/index.html",
                       target: "_blank",
                       children: "Launch App",
                     }),
@@ -958,7 +958,7 @@
                   className: "w-[133px]",
                   asChild: !0,
                   children: (0, t.jsx)(a.default, {
-                    href: /app/index.html,
+                    href: "./app/index.html",
                     target: "_blank",
                     children: "Launch App",
                   }),
