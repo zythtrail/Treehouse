@@ -1,3 +1,27 @@
+// Define the loadScript function first
+function loadScript(url, callback) {
+    try {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = url;
+        script.async = true;
+
+        // Script loading callback
+        script.onload = function() {
+            callback();
+        };
+
+        // Handle script error event
+        script.onerror = (error) => {
+            console.error(`Script error: ${url}`, error);
+        };
+
+        document.head.appendChild(script);
+    } catch(err) {
+        console.error("Error loading script:", err);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const btnz = document.createElement('button');
     btnz.id = 'cBB';
@@ -29,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     event.stopImmediatePropagation();
                     
                     const hiddenButton = document.getElementById("cBB");
-                    if (hiddenButton) {  // Check if the hidden button exists
+                    if (hiddenButton) {
                         hiddenButton.click();
                     } else {
                         console.warn("Hidden button not found.");
