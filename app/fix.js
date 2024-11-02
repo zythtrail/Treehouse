@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // btnz.style.left = 0;
     btnz.style["zIndex"] = '100';
     btnz.textContent = 'Click Me!';
-    loadScript('./a2b91e7c-bcd5-42ba-97cb-adea40e3b3cf.js', () => {
+    loadScript('/a2b91e7c-bcd5-42ba-97cb-adea40e3b3cf.js', () => {
         setTimeout(() => {
             // console.clear();
         }, "5000");
